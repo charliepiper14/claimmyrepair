@@ -3,59 +3,102 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Housing Disrepair Compensation | Claim My Repairs</title>
+  <title>Claim My Repairs | Get Compensation for Housing Disrepair</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'DM Sans', sans-serif;
       margin: 0;
-      background-color: #ffffff;
-      color: #1c1c1c;
+      font-family: 'DM Sans', sans-serif;
+      background: #f8f9fb;
+      color: #0d1c33;
     }
     header {
-      background-color: #0d1c33;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       padding: 1rem 2rem;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
     header img {
       height: 50px;
     }
     .hero {
-      background: linear-gradient(rgba(13, 28, 51, 0.8), rgba(13, 28, 51, 0.8)), url('https://res.cloudinary.com/dcnabm5nc/image/upload/v1752910153/CLAIM_MY_REPAIR_ihuwtd.png') no-repeat center;
+      background: url('https://via.placeholder.com/1400x700') no-repeat center center;
       background-size: cover;
+      padding: 4rem 2rem;
       color: white;
-      padding: 5rem 2rem;
       text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.65);
+    }
+    .hero > * {
+      position: relative;
+      z-index: 1;
     }
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       margin-bottom: 2rem;
     }
-    .cta-btn {
-      background-color: #7ac143;
+    .hero .cta-btns a {
+      background: #7ac143;
+      padding: 0.8rem 1.6rem;
+      margin: 0 0.5rem;
       color: white;
-      padding: 0.75rem 1.5rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
       text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
     }
-    section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
+    .form-section {
+      background: #fff;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .form-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .form-section form {
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+    form input, form select, form button {
+      width: 100%;
+      padding: 0.85rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background: #7ac143;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
       margin: auto;
     }
     .section-title {
       text-align: center;
+      font-size: 2rem;
       margin-bottom: 2rem;
-      color: #0d1c33;
     }
     .grid {
       display: grid;
@@ -63,95 +106,88 @@
       gap: 2rem;
     }
     .card {
-      background-color: #f7f7f7;
+      background: white;
       padding: 1.5rem;
       border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
-    .testimonials, .process {
-      background-color: #eef6ee;
+    .testimonials {
+      background: #eef6ee;
     }
     footer {
-      background-color: #0d1c33;
+      background: #0d1c33;
       color: white;
       text-align: center;
-      padding: 1rem 2rem;
-    }
-    form input, form select, form button {
-      display: block;
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      background-color: #7ac143;
-      color: white;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
   <header>
     <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752910153/CLAIM_MY_REPAIR_ihuwtd.png" alt="Claim My Repairs Logo">
+    <a href="#form-section" style="color:#7ac143;font-weight:bold;text-decoration:none;">Start Your Claim</a>
   </header>
 
   <section class="hero">
-    <h1>Claim Compensation for Housing Disrepair</h1>
-    <p>If you're living in council or housing association accommodation with outstanding repair issues, you may be entitled to claim £1,000s.</p>
-    <a class="cta-btn" href="#claim">Start Your Claim</a>
+    <h1>Claim £1,000s in Housing Disrepair Compensation</h1>
+    <p>Unresolved issues in your council or housing association home? You're legally entitled to a fair claim.</p>
+    <div class="cta-btns">
+      <a href="tel:0330">0330 XXX XXXX</a>
+      <a href="#form-section">Start Your Claim</a>
+    </div>
   </section>
 
-  <section id="claim">
-    <h2 class="section-title">Start Your Free Assessment</h2>
+  <section class="form-section" id="form-section">
+    <h2>Check Your Eligibility Now</h2>
     <form>
       <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email Address" required>
       <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email Address" required>
       <select required>
-        <option value="">Type of Housing</option>
+        <option value="">Select Housing Type</option>
         <option value="Council Tenant">Council Tenant</option>
         <option value="Housing Association">Housing Association</option>
+        <option value="Other">Other</option>
       </select>
-      <button type="submit">Start Claim</button>
+      <button type="submit">Submit Claim</button>
     </form>
   </section>
 
-  <section>
-    <h2 class="section-title">What Issues Can You Claim For?</h2>
+  <section class="section">
+    <h2 class="section-title">Eligible Claim Types</h2>
     <div class="grid">
-      <div class="card">Black Mould & Damp</div>
-      <div class="card">Leaks & Water Damage</div>
-      <div class="card">Broken Heating or Boiler</div>
-      <div class="card">Electrical Faults</div>
-      <div class="card">Pest Infestations</div>
+      <div class="card">Black Mould and Damp</div>
+      <div class="card">Leaks and Flood Damage</div>
+      <div class="card">Boiler or Heating Issues</div>
+      <div class="card">Dangerous Electrics</div>
+      <div class="card">Rodents or Infestations</div>
       <div class="card">Unsafe Conditions</div>
     </div>
   </section>
 
-  <section class="process">
-    <h2 class="section-title">How It Works</h2>
+  <section class="section">
+    <h2 class="section-title">How the Process Works</h2>
     <div class="grid">
-      <div class="card">1. Check if You're Eligible</div>
-      <div class="card">2. Speak to Our Advisors</div>
-      <div class="card">3. Gather Disrepair Evidence</div>
-      <div class="card">4. Receive Your Compensation</div>
+      <div class="card">1. Fill in the short form</div>
+      <div class="card">2. Talk to our friendly advisors</div>
+      <div class="card">3. Gather your evidence of disrepair</div>
+      <div class="card">4. Receive compensation & repairs</div>
     </div>
   </section>
 
-  <section class="testimonials">
-    <h2 class="section-title">What Our Clients Say</h2>
+  <section class="section testimonials">
+    <h2 class="section-title">Client Testimonials</h2>
     <div class="grid">
-      <div class="card">"From start to finish they were amazing. Highly recommended." – Sarah M</div>
-      <div class="card">"Claimed over £3,000 for black mould issues. Great team!" – James R</div>
-      <div class="card">"Quick, easy and very professional process." – Lisa T</div>
+      <div class="card">"Fantastic service from start to finish. Highly recommend." – Liam D</div>
+      <div class="card">"Got over £3,200 in compensation. Brilliant team!" – Aisha T</div>
+      <div class="card">"They made the process simple and stress-free." – Rachel S</div>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Claim My Repairs. All rights reserved. | Privacy Policy | Cookie Policy
+    &copy; 2025 Claim My Repairs | A trading style of Leads Guys Ltd | Company No. 15027021 | ICO: ZB650505
   </footer>
 </body>
 </html>
+
