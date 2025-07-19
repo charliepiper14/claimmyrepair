@@ -37,7 +37,7 @@
         }
 
         .logo {
-            height: 60px;
+            height: 80px;
         }
 
         .logo img {
@@ -242,13 +242,14 @@
         .about-image {
             width: 100%;
             height: 300px;
-            background: #f0f0f0;
-            border: 2px dashed #ccc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
             border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .about-text h2 {
@@ -334,8 +335,8 @@
         }
 
         .types-row.bottom {
-            grid-template-columns: repeat(2, 1fr);
-            max-width: 800px;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1200px;
             margin: 0 auto;
         }
 
@@ -350,14 +351,15 @@
         .type-image {
             width: 100%;
             height: 200px;
-            background: #f0f0f0;
-            border: 2px dashed #ccc;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #999;
             margin-bottom: 25px;
+            overflow: hidden;
+        }
+
+        .type-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .type-card h3 {
@@ -519,37 +521,438 @@
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero-content {
+                gap: 40px;
+            }
+            
+            .types-row.bottom {
+                max-width: 900px;
+            }
+        }
+
         @media (max-width: 768px) {
+            .nav {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .logo {
+                height: 60px;
+            }
+            
+            .cta-phone {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 60px 0;
+            }
+
             .hero-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+
+            .hero-text h1 {
+                font-size: 2.2rem;
+                line-height: 1.1;
+            }
+            
+            .hero-text p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                padding: 15px 25px;
+                text-align: center;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .trust-indicators {
+                flex-direction: column;
+                gap: 20px;
+                align-items: flex-start;
+            }
+
+            .hero-form {
+                padding: 30px 20px;
+            }
+            
+            .hero-form h3 {
+                font-size: 1.2rem;
+            }
+
+            .stats {
+                padding: 40px 0;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .stat-item h3 {
+                font-size: 2rem;
+            }
+
+            .about {
+                padding: 60px 0;
             }
 
             .about-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-
-            .process-steps {
-                grid-template-columns: 1fr;
+            
+            .about-text h2 {
+                font-size: 1.8rem;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .disrepair-types {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .section-header {
+                margin-bottom: 40px;
             }
 
             .types-row.top,
             .types-row.bottom {
                 grid-template-columns: 1fr;
             }
+            
+            .type-card {
+                padding: 30px 20px;
+            }
 
-            .hero-text h1 {
-                font-size: 2.2rem;
+            .process {
+                padding: 60px 0;
+            }
+
+            .process-steps {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .step-number {
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+
+            .testimonials {
+                padding: 60px 0;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .testimonial {
+                padding: 25px 20px;
+            }
+
+            .final-cta {
+                padding: 60px 0;
+            }
+            
+            .final-cta h2 {
+                font-size: 2rem;
+            }
+            
+            .final-cta p {
+                font-size: 1.1rem;
             }
 
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 15px;
+            }
+            
+            .cta-buttons .btn-primary,
+            .cta-buttons .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+            
+            .header {
+                padding: 10px 0;
+            }
+            
+            .nav {
+                justify-content: space-between;
+                align-items: center;
+            }
+            
+            .logo {
+                height: 50px;
+            }
+            
+            .cta-phone {
+                font-size: 0.8rem;
+                padding: 8px 15px;
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-text p {
+                font-size: 1rem;
+            }
+            
+            .btn-primary,
+            .btn-secondary {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+
+            .hero-form {
+                padding: 25px 15px;
+            }
+            
+            .hero-form h3 {
+                font-size: 1.1rem;
+            }
+            
+            .form-group input,
+            .form-group select {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+            
+            .form-submit {
+                padding: 15px;
+                font-size: 1rem;
+            }
+
+            .trust-indicators {
+                gap: 15px;
+            }
+            
+            .trust-item {
+                font-size: 0.9rem;
+            }
+
+            .stats-grid {
+                gap: 25px;
+            }
+            
+            .stat-item h3 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-item p {
+                font-size: 0.9rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.7rem;
+            }
+            
+            .section-header p {
+                font-size: 0.95rem;
+            }
+
+            .about-text h2 {
+                font-size: 1.6rem;
+            }
+            
+            .about-text p {
+                font-size: 0.95rem;
+            }
+
+            .disrepair-item {
+                padding: 8px 0;
+            }
+            
+            .disrepair-icon {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+
+            .type-card {
+                padding: 25px 15px;
+            }
+            
+            .type-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .type-card p {
+                font-size: 0.9rem;
+            }
+            
+            .type-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .process-step h4 {
+                font-size: 1.1rem;
+            }
+            
+            .process-step p {
+                font-size: 0.9rem;
+            }
+
+            .testimonial-text {
+                font-size: 0.9rem;
+            }
+            
+            .author-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 0.9rem;
+            }
+
+            .final-cta h2 {
+                font-size: 1.8rem;
+            }
+            
+            .final-cta p {
+                font-size: 1rem;
+            }
+            
+            .final-cta div {
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+
+            .footer {
+                padding: 30px 0;
+            }
+            
+            .footer-content h4 {
+                font-size: 1.1rem;
+            }
+            
+            .footer-content p {
+                font-size: 0.9rem;
+            }
+            
+            .footer p {
+                font-size: 0.8rem;
+                line-height: 1.4;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero-text h1 {
+                font-size: 1.6rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+            
+            .about-text h2 {
+                font-size: 1.4rem;
+            }
+            
+            .final-cta h2 {
+                font-size: 1.6rem;
+            }
+            
+            .type-card {
+                padding: 20px 10px;
+            }
+            
+            .hero-form {
+                padding: 20px 10px;
+            }
+            
+            .testimonial {
+                padding: 20px 15px;
+            }
+        }
+
+        /* Landscape mobile orientation */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .hero {
+                padding: 40px 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .stats,
+            .about,
+            .disrepair-types,
+            .process,
+            .testimonials {
+                padding: 50px 0;
+            }
+        }
+
+        /* Touch-friendly adjustments */
+        @media (max-width: 768px) {
+            .btn-primary,
+            .btn-secondary,
+            .type-btn,
+            .form-submit,
+            .cta-phone {
+                min-height: 44px;
+                min-width: 44px;
+                border-radius: 8px;
+            }
+            
+            .form-group input,
+            .form-group select {
+                min-height: 44px;
+                border-radius: 8px;
+            }
+            
+            .checkmark {
+                width: 24px;
+                height: 24px;
+                font-size: 14px;
             }
         }
     </style>
@@ -629,6 +1032,7 @@
                                 <option value="heating">Heating & Boiler Issues</option>
                                 <option value="electrical">Electrical Problems</option>
                                 <option value="pest">Pest Infestation</option>
+                                <option value="structural">Structural Issues</option>
                                 <option value="other">Other Disrepair</option>
                             </select>
                         </div>
@@ -664,7 +1068,7 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-image">
-                    [Social Housing Image Placeholder]
+                    <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752938195/istockphoto-1443207287-612x612_kjev5e.jpg" alt="Social Housing Building">
                 </div>
                 <div class="about-text">
                     <div class="section-label">WHY TENANTS ARE CLAIMING</div>
@@ -717,21 +1121,27 @@
             <div class="types-grid">
                 <div class="types-row top">
                     <div class="type-card">
-                        <div class="type-image">[Black Mould Image]</div>
+                        <div class="type-image">
+                            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752938307/causes-of-mold_lezuhr.jpg" alt="Black Mould">
+                        </div>
                         <h3>Black Mould</h3>
                         <p>Black mould poses serious health risks. If your landlord has neglected to address persistent mould problems, you may be eligible for compensation.</p>
                         <a href="#form" class="type-btn">Start Your Claim</a>
                     </div>
 
                     <div class="type-card">
-                        <div class="type-image">[Boiler & Electrical Image]</div>
+                        <div class="type-image">
+                            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752938471/broken-boiler_plpkfa.jpg" alt="Broken Boiler">
+                        </div>
                         <h3>Boiler & Electrical</h3>
                         <p>Faulty heating systems or unsafe electrical installations can create dangerous living conditions and health risks requiring immediate attention.</p>
                         <a href="#form" class="type-btn">Start Your Claim</a>
                     </div>
 
                     <div class="type-card">
-                        <div class="type-image">[Damp & Mould Image]</div>
+                        <div class="type-image">
+                            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752938577/dS94VLjMhXBFX8hUf7Y5WP_ceb8yw.jpg" alt="Damp and Mould">
+                        </div>
                         <h3>Damp & Mould</h3>
                         <p>Living with persistent dampness can cause respiratory problems and property damage. Don't let your landlord ignore these issues.</p>
                         <a href="#form" class="type-btn">Start Your Claim</a>
@@ -740,16 +1150,29 @@
 
                 <div class="types-row bottom">
                     <div class="type-card">
-                        <div class="type-image">[Leaks & Water Damage Image]</div>
+                        <div class="type-image">
+                            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752938648/Water-Damage-Wall-1536x1036_bx7u8b.jpg" alt="Water Damage">
+                        </div>
                         <h3>Leaks & Water Damage</h3>
                         <p>Water leaks can cause structural damage and create unhealthy living environments. Take action if your landlord hasn't responded to reports.</p>
                         <a href="#form" class="type-btn">Start Your Claim</a>
                     </div>
 
                     <div class="type-card">
-                        <div class="type-image">[Pest Infestation Image]</div>
+                        <div class="type-image">
+                            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752938760/Mouse_Nest_ms1c0i.jpg" alt="Pest Infestation">
+                        </div>
                         <h3>Pest Infestation</h3>
                         <p>Rodents, insects, and other pest problems make homes unlivable. If your landlord has ignored pest issues, we can help you claim.</p>
+                        <a href="#form" class="type-btn">Start Your Claim</a>
+                    </div>
+
+                    <div class="type-card">
+                        <div class="type-image">
+                            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1752938891/675dcad40efa3f8b3a1404bd_675af5d04653216726c41a4c_Green-Shape-with-Nature-Photo-Travel-Blog-Graphic-17_pxgh0w.png" alt="Structural Issues">
+                        </div>
+                        <h3>Structural Issues</h3>
+                        <p>Cracks in walls, subsidence, roof damage, or foundation problems can make your home unsafe. Your landlord is responsible for major structural repairs.</p>
                         <a href="#form" class="type-btn">Start Your Claim</a>
                     </div>
                 </div>
